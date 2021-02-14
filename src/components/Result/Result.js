@@ -17,10 +17,10 @@ const Result = ({imageSrc, imageHeight, imageWidth}) => {
         A4Height = 796; 
     }
 
-    let resultWidth = imageWidth;
+    let resultWidth = imageWidth; 
     let resultHeight = imageHeight;
 
-    const fitVertically = () => {
+    const fitVertically = () => { 
         resultHeight = A4Height;
         resultWidth = A4Height/ratio;
     }
