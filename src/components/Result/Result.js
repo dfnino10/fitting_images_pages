@@ -1,4 +1,6 @@
 import React from 'react';
+import { PDFViewer } from '@react-pdf/renderer';
+import Pdf from '../Pdf/Pdf'
 
 const Result = ({imageSrc, imageHeight, imageWidth}) => {
     let ratio = imageHeight/imageWidth;
@@ -52,6 +54,9 @@ const Result = ({imageSrc, imageHeight, imageWidth}) => {
         <p>Orientation: {orientation}</p>
         <p>Height: {resultHeight}</p>
         <p>Width: {resultWidth}</p>
+        <PDFViewer>
+            <Pdf orientation={orientation} imageSrc={imageSrc} imageHeight={imageHeight} imageWidth={imageWidth}/>
+        </PDFViewer>
     </div>;
     return(
         <>
